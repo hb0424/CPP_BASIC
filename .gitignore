@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+
+/build
+CPP_BASIC.code-workspace
