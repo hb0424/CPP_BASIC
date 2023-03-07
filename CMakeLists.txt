@@ -6,10 +6,15 @@ enable_testing()
 
 #libs
 add_subdirectory (build_in_data)
+add_subdirectory (friend)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
-target_link_libraries(${PROJECT_NAME} BuildInData)
+set(link_list)
+list(APPEND link_list BuildInData)
+list(APPEND link_list Friend)
+
+target_link_libraries(${PROJECT_NAME} ${link_list})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
