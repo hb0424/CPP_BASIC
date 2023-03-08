@@ -4,11 +4,13 @@ namespace Friend{
 
 Time::Time()
 {
+    std::cout << "  Time::Time()" << std::endl;
     m_hours = m_minutes = 0;
 }
 
 Time::Time(int h, int m)
 {
+    std::cout << "  Time::Time(int h, int m)" << std::endl;
     m_hours = h;
     m_minutes = m;
 }
@@ -22,6 +24,7 @@ Time Time::operator+(const Time &t) const
     sum.m_minutes %= 60;
     return sum;
 }
+
 
 
 Time operator+(int n, const Time &t)
