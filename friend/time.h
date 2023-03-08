@@ -13,7 +13,7 @@ public:
     Time();
     Time(int h, int m = 0);
     
-    Time operator+(const Time &t);
+    Time operator+(const Time &t) const;
 
     friend Time operator+(int n, const Time &t);
 };

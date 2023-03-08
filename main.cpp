@@ -14,10 +14,12 @@ int main()
     string_CXX11();
 
     std::cout << "====== friend " << std::endl;
-    Friend::Time time;
+    const Friend::Time time;
     std::cout << "time + 3;" << std::endl;
     time + 3;
     std::cout << "3 + time; //非成员重载运算符" << std::endl;
     3 + time;
+
+   
     return 0;
 }
