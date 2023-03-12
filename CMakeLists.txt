@@ -7,12 +7,14 @@ enable_testing()
 #libs
 add_subdirectory (build_in_data)
 add_subdirectory (friend)
+add_subdirectory (class)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
 set(link_list)
 list(APPEND link_list BuildInData)
 list(APPEND link_list Friend)
+list(APPEND link_list Class)
 
 target_link_libraries(${PROJECT_NAME} ${link_list})
 

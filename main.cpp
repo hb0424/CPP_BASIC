@@ -1,6 +1,7 @@
 #include <iostream>
 #include "build_in_data/build_in_data.h"
 #include "friend/friend.h"
+#include "class/class.h"
 
 int main()
 {
@@ -25,5 +26,13 @@ int main()
     int iNumber = Friend::Number(99);
     std::cout << "time + (int)Friend::Number(99); " << std::endl;
     time + (int)Friend::Number(99);
+
+    std::cout << "====== virtual " << std::endl;
+    child();
+    child(1);
+    std::cout << "pvD d(1, 2, 3); " << std::endl;
+    pvD d(1, 2, 3);
+    std::cout << "  d.getA() = " << d.getA() << std::endl;
+
     return 0;
 }
